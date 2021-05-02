@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+
+<mapper namespace="com.gamsungcamp.vibes.login.dao.LoginDAO">
+	
+    <!-- <resultMap type="userVO" id="userResultMap">
+        <result column="USERID" property="userId" />
+        <result column="PASSWORD" property="password" />
+    </resultMap> -->
+ 
+    <select id="selectloginUser" parameterType="loginForm" resultType="userVO">
+        SELECT USERID, PASSWORD
+        FROM testTable
+        WHERE USERID = #{userId}
+        AND PASSWORD = #{password}
+    </select>
+    
+ 
+   <!--  <insert id="insert" parameterType="project">
+    </insert>
+    <select id="selectOne" parameterType="int" resultMap="projectResultMap">
+    </select>
+    <update id="update" parameterType="project">
+    </update>
+    <delete id="delete" parameterType="int">
+    </delete> -->
+</mapper>
