@@ -29,6 +29,7 @@ public class CommonInterceptor extends HandlerInterceptorAdapter{
     	
     	if(proxyIp == null || proxyIp.length()==0) {
     		accsIpAddr = request.getRemoteAddr();
+    		System.out.println("Çï·Î");
     	}else {
     		accsIpAddr = proxyIp;
     	}
